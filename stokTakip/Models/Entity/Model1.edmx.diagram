@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="acb5b6045a864dbfbc8767c0bd9e7d3b" Name="Diagram1">
+        <EntityTypeShape EntityType="stokTakipModel.kategoriler" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="stokTakipModel.musteriler" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="stokTakipModel.satislar" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="stokTakipModel.sysdiagrams" Width="1.5" PointX="5.875" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="stokTakipModel.urunler" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="stokTakipModel.FK_urunler_kategoriler" ManuallyRouted="false" />
+        <AssociationConnector Association="stokTakipModel.FK_satislar_musteriler" ManuallyRouted="false" />
+        <AssociationConnector Association="stokTakipModel.FK_satislar_urunler" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

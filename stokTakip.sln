@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stokTakip", "stokTakip\stokTakip.csproj", "{61B5096F-15AB-4FF6-8960-08DEB58AFF6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{61B5096F-15AB-4FF6-8960-08DEB58AFF6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61B5096F-15AB-4FF6-8960-08DEB58AFF6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61B5096F-15AB-4FF6-8960-08DEB58AFF6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61B5096F-15AB-4FF6-8960-08DEB58AFF6F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {090E0BD2-7096-446B-BC38-E9640BDE30BE}
+	EndGlobalSection
+EndGlobal

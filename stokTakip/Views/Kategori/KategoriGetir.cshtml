@@ -1,0 +1,26 @@
+﻿@model stokTakip.Models.Entity.kategoriler
+
+
+
+@{
+    ViewBag.Title = "KategoriGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+@using (Html.BeginForm("Guncelle", "Kategori", FormMethod.Post))
+{
+
+    <div class="form-group">
+        <h4>Kategori No</h4>
+        @Html.TextBoxFor(m => m.kategoriId, new { @class = "form-control" })
+        <br />
+        <h4>Kategori Ad</h4>
+        @Html.TextBoxFor(m => m.kategoriAd, new { @class = "form-control" })
+
+    </div>
+
+    <button class="btn btn-warning">Güncelle</button>
+
+
+}

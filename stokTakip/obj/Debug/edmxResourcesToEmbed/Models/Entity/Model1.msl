@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="stokTakipModelStoreContainer" CdmEntityContainer="stokTakipEntities">
+    <EntitySetMapping Name="kategoriler">
+      <EntityTypeMapping TypeName="stokTakipModel.kategoriler">
+        <MappingFragment StoreEntitySet="kategoriler">
+          <ScalarProperty Name="kategoriId" ColumnName="kategoriId" />
+          <ScalarProperty Name="kategoriAd" ColumnName="kategoriAd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="musteriler">
+      <EntityTypeMapping TypeName="stokTakipModel.musteriler">
+        <MappingFragment StoreEntitySet="musteriler">
+          <ScalarProperty Name="musteriId" ColumnName="musteriId" />
+          <ScalarProperty Name="musteriAd" ColumnName="musteriAd" />
+          <ScalarProperty Name="musteriSoyad" ColumnName="musteriSoyad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="satislar">
+      <EntityTypeMapping TypeName="stokTakipModel.satislar">
+        <MappingFragment StoreEntitySet="satislar">
+          <ScalarProperty Name="satisId" ColumnName="satisId" />
+          <ScalarProperty Name="urunId" ColumnName="urunId" />
+          <ScalarProperty Name="musteriId" ColumnName="musteriId" />
+          <ScalarProperty Name="adet" ColumnName="adet" />
+          <ScalarProperty Name="satisFiyat" ColumnName="satisFiyat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="stokTakipModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="urunler">
+      <EntityTypeMapping TypeName="stokTakipModel.urunler">
+        <MappingFragment StoreEntitySet="urunler">
+          <ScalarProperty Name="urunId" ColumnName="urunId" />
+          <ScalarProperty Name="urunAd" ColumnName="urunAd" />
+          <ScalarProperty Name="urunMarkaAd" ColumnName="urunMarkaAd" />
+          <ScalarProperty Name="urunKategori" ColumnName="urunKategori" />
+          <ScalarProperty Name="urunFiyat" ColumnName="urunFiyat" />
+          <ScalarProperty Name="urunStok" ColumnName="urunStok" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

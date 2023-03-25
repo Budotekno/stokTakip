@@ -1,0 +1,50 @@
+﻿@model stokTakip.Models.Entity.urunler
+
+
+@{
+    ViewBag.Title = "UrunGetir";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+@using (Html.BeginForm("Guncelle", "Urun", FormMethod.Post))
+{
+
+    <div>
+        <h4>Ürün No</h4>
+        @Html.TextBoxFor(m => m.urunId, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <h4>Ürün Ad</h4>
+        @Html.TextBoxFor(m => m.urunAd, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <h4>Markası</h4>
+        @Html.TextBoxFor(m => m.urunMarkaAd, new { @class = "form-control" })
+    </div>
+   
+    <div>
+        <h4>Kategori</h4>
+        @Html.DropDownListFor(m => m.kategoriler.kategoriId,(List<SelectListItem>)ViewBag.dgr, new { @class = "form-control" })
+     @*   @Html.TextBoxFor(m => m.kategoriler.kategoriAd, new { @class = "form-control" }) *@
+    </div>
+
+    <div>
+        <h4>Stok</h4>
+        @Html.TextBoxFor(m => m.urunStok, new { @class = "form-control" })
+    </div>
+
+    <div>
+        <h4>Ürünün Fiyatı</h4>
+        @Html.TextBoxFor(m => m.urunFiyat, new { @class = "form-control" })
+    </div>
+
+    <br />
+    <button class="btn btn-warning">Güncelle</button>
+
+}
+
+
+

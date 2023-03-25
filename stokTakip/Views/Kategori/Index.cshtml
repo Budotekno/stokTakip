@@ -1,0 +1,48 @@
+﻿@using stokTakip.Models.Entity
+@model List<kategoriler>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Kategori No</th>
+        <th>Kategori Adı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    <tbody>
+
+        @foreach (var kat in Model)
+        {
+            <tr>
+                <td> @kat.kategoriId</td>
+                <td>@kat.kategoriAd</td>
+                <td>
+                    <a href="/Kategori/Sil/@kat.kategoriId" class="btn btn-danger">Sil</a>
+
+                </td>
+                <td>
+                    <a href="/Kategori/KategoriGetir/@kat.kategoriId" class="btn btn-success">Güncelle</a>
+
+                </td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>
+
+
+<a href="/Kategori/YeniKategori/" class="btn btn-warning">Kategori Ekle</a>
+
+
+
+

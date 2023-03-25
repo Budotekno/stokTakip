@@ -1,0 +1,47 @@
+﻿@model stokTakip.Models.Entity.kategoriler
+
+
+@{
+    ViewBag.Title = "YeniKategori";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+
+
+
+<form class="form-group" method="post">
+    @*
+        <div>
+            <h3> <label>Kategori Adı</label> </h3>
+            <input type="text" class="form-control" name="kategoriAd" />
+
+        </div>
+    *@
+
+    <div>
+        <h3> <label>Kategori Adı</label> </h3>
+        @Html.TextBoxFor(m => m.kategoriAd , new { @class = "form-control"})
+        @Html.ValidationMessageFor(m=>m.kategoriAd,"",new { @style="color:red"})
+
+    </div>
+    <br />
+
+    <div>
+
+        <button class="btn btn-warning" id="btnKategoriEkle" >Kategori Ekle</button>
+
+    </div>
+
+    <script>
+        $('#btnKategoriEkle').click(function ()
+        {
+            alert("Kategori ekleme işlemi yapıldı")
+
+        }
+            
+            
+            )
+    </script>
+</form>
+

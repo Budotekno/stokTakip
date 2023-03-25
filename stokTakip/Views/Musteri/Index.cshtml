@@ -1,0 +1,47 @@
+﻿@using stokTakip.Models.Entity
+@model List<musteriler>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+
+<table class="table table-bordered ">
+    <tr>
+        <th>Müşteri No</th>
+        <th>Müşteri Adı</th>
+        <th>Müşteri Soyadı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+
+    <tbody>
+
+        @foreach (var deger in Model)
+        {
+            <tr>
+                <td>@deger.musteriId</td>
+                <td>@deger.musteriAd</td>
+                <td>@deger.musteriSoyad</td>
+                <td>
+                    <a href="/Musteri/Sil/@deger.musteriId" class="btn btn-danger">Sil</a>
+
+                </td>
+                <td>
+                    <a href="/Musteri/MusteriGetir/@deger.musteriId" class="btn btn-success">Güncelle</a>
+
+                </td>
+            </tr>
+
+        }
+
+
+    </tbody>
+</table>
+
+
+<a class="btn btn-warning" href="/Musteri/MusteriEkle/">Müşteri Ekle</a>
+
+

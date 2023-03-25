@@ -1,0 +1,51 @@
+﻿@model stokTakip.Models.Entity.urunler
+@{
+    ViewBag.Title = "YeniUrun";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+
+    <div>
+        <label>Ürün Adı</label>
+        <input type="text" class="form-control" name="urunAD" required />
+    </div>
+
+    <br />
+
+    <div>
+        <label>Marka Adı</label>
+        <input type="text" class="form-control" name="urunMarkaAD" required />
+    </div>
+
+    <br />
+    <div>
+        <label>Kategori</label>
+        @Html.DropDownListFor(m=>m.kategoriler.kategoriId, (List<SelectListItem>)ViewBag.dgr, new {@class ="form-control form"})
+    </div>
+
+    <br />
+
+    <div>
+        <label>Fiyat</label>
+        <input type="number" value="0" class="form-control" name="urunFiyat" required />
+    </div>
+
+
+    <br />
+
+    <div>
+        <label>Stok</label>
+        <input type="number" value="0" class="form-control" name="urunStok" required />
+    </div>
+
+    <br />
+
+    <div>
+        <button class="btn btn-warning">Ürün Ekle</button>    
+    </div>
+
+
+
+</form>
+

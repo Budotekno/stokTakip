@@ -1,0 +1,49 @@
+﻿@using stokTakip.Models.Entity
+@model List<urunler>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>Ürün No</th>
+        <th>Ürün Adı</th>
+        <th>Markası</th>
+        <th>Kategori</th>
+        <th>Fiyat</th>
+        <th>Stok</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+
+    <tbody>
+
+        @foreach (var urn in Model)
+        {
+            <tr>
+                <td>@urn.urunId</td>
+                <td>@urn.urunAd</td>
+                <td>@urn.urunMarkaAd</td>
+                <td>@urn.kategoriler.kategoriAd</td>
+                <td>@urn.urunFiyat</td>
+                <td>@urn.urunStok</td>
+                <td>
+                    <a href="/Urun/Sil/@urn.urunId" class="btn btn-danger">Sil</a>
+
+                </td>
+                <td>
+                    <a href="/Urun/UrunGetir/@urn.urunId" class="btn btn-success">Güncelle</a>
+
+                </td>
+            </tr>
+
+        }
+    </tbody>
+
+</table>
+
+<a href="/Urun/YeniUrun/" class="btn btn-warning">Ürün Ekle</a>
